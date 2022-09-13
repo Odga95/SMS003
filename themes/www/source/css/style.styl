@@ -1,0 +1,140 @@
+font-xs = 0.7em
+font-s = 1em
+font-m = 1.2em
+font-l = 1.4em
+font-xl = 2em
+font-xxl = 3em
+
+fontfam1 = 'Josefin Sans', sans-serif;
+fontfam2 = 'Aclonica', sans-serif;
+
+color-white = #ffffff
+color-black = #000000
+color-letter = #333333
+color-first = #cb6cec
+color-second = #00c2cb
+color-third = #d58aeb
+
+
+movil = 'screen and (min-width: 576px)'
+tablet = 'screen and (min-width: 768px)'
+escritorio-s = 'screen and (min-width: 992px)'
+escritorio-m = 'screen and (min-width: 1200px)'
+escritorio-l = 'screen and (min-width: 1400px)'
+
+*
+  margin 0px
+  padding 0px
+  -webkit-box-sizing border-box!important
+  -moz-box-sizing border-box!important
+  box-sizing border-box!important
+
+vendor(prop, args)
+  -webkit-{prop} args
+  -moz-{prop} args
+  {prop} args
+
+border-radius()
+  vendor('border-radius', arguments)
+
+transform()
+  vendor('transform', arguments)  
+
+transition()
+  vendor('transition', arguments)
+
+//Colores
+
+.color-white
+  color color-white
+.color-black
+  color color-black
+.color-letter
+  color color-letter
+.color-first
+  color color-first
+.color-second
+  color color-second
+.color-third
+  color color-third
+
+
+.border-color-white
+  border-color color-white
+.border-color-black
+  border-color color-black
+.border-color-letter
+  border-color color-letter
+.border-color-first
+  border-color color-first
+.border-color-second
+  border-color color-second
+.border-color-third
+  border-color color-third
+
+
+.back-color-white
+  background-color color-white
+.back-color-black
+  background-color color-black
+.back-color-letter
+  background-color color-letter
+.back-color-first
+  background-color color-first
+.back-color-second
+  background-color color-second
+.back-color-third
+  background-color color-third
+
+//Estilos generales
+
+.border-s
+  border-width 1px
+  border solid
+
+.border-m
+  border-width 2px
+  border solid
+
+.border-l
+  border-width 3px
+  border solid
+
+//Letras
+
+.fontfam1
+  font-family fontfam1
+.fontfam2
+  font-family fontfam2
+
+.font-xs
+  font-size font-xs
+.font-s
+  font-size font-s
+.font-m
+  font-size font-m
+.font-l
+  font-size font-l
+.font-xl
+  font-size font-xl
+.font-xxl
+  font-size font-xxl
+
+
+//Estilos
+
+body
+  color color-letter
+  font-family fontfam1
+  font-size font-l
+
+.container
+  padding 0 20px
+  max-width 1024px
+  margin auto
+
+.alto
+  height 80px
+  background color-white
+  @media tablet
+    height 160px
