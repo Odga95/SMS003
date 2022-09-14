@@ -1,0 +1,139 @@
+@import 'style.styl';
+@import 'footer.styl';
+
+header
+    position relative
+    width: 100%
+    .bg-color
+        border 0px
+        background-color: transparent
+        .navbar
+            position: fixed
+            width 100%
+            transition 0.4s
+            padding: 10px 0px
+            height: fit-content
+            background: rgb(255, 255, 255)
+            @media tablet
+                padding: 10px 0px
+        .menu
+            width: 100%
+            display flex
+            justify-content: right 
+            align-items: center
+            height: 30px
+            img
+                margin-top: auto
+                margin-bottom: auto
+                height: 100%
+                width: 200px
+            @media tablet
+                display none
+            img
+                margin-right: 20px
+        .navbar-fixed-top
+            background: white
+            position: fixed
+            z-index: 1000
+            width: 100%
+            transition: 1s
+            -webkit-box-shadow: 0px 3px 5px -1px hsla(0, 0%, 0%, 0.2);
+            @media tablet
+                padding: 15px 0px
+        .navbar-brand
+            position: absolute
+            top 50%
+            transform: translate(15%, -50%);
+            height:40px
+            width: 150px
+            z-index 100
+            @media tablet 
+                height:65px
+                width: 150px
+                margin-top: auto
+                margin-bottom: auto
+            img
+                height: 100%
+                object-fit: cover
+                margin auto
+        .navbar-nav
+            width 100%
+            display: none
+            position: absolute
+            top: 0
+            opacity: 0
+            margin-top 49px
+            z-index 1000
+            transition 1s
+            @media tablet
+                display: flex
+                opacity: 1
+                position relative
+                margin-top 0px
+                
+
+            justify-content: center
+            align-items: center
+            @media tablet
+                display flex
+            li
+                border-bottom:  1px solid color-letter
+                list-style: none
+                background: white
+                position: relative
+                justify-content: center
+                padding: 0px 20px;
+                text-align: center
+                @media tablet
+                    background: transparent
+                    border none
+                a
+                    
+                    background: white
+                    font-size 13px
+                    line-height 50px
+                    font-weight 600
+                    text-transform uppercase
+                    text-decoration: none
+                    color: rgb(0, 0, 0);
+                    background-color: transparent;
+                    transition: all 0.3s ease;
+                    position: relative;
+                    font-weight: 600;
+                    display: block
+                    width: 100%
+                a:hover
+                    color: color-first
+
+                .subMenu
+                    position absolute
+                    left 50%
+                    top 50%
+                    display: none
+                    border-radius: 10px
+                    z-index 2
+
+                    ul
+                        min-width: 150px
+                        max-width: 300px
+                        display: flex
+                        flex-direction: column
+                        text-align: center
+                        justify-content: center
+                        align-items: center
+                        li
+                            display: block
+                            margin: 0
+                            width: 100%
+                            padding 0px 5px
+                            a   
+                                width: 100%
+                                margin: 0px 
+
+            li:hover .subMenu
+                display: block
+                background: color-first
+                li:hover
+                    background: gray
+                    a
+                        color: white

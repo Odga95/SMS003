@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@900&family=Roboto&display=swap');
+
 font-xs = 0.7em
 font-s = 1em
 font-m = 1.2em
@@ -5,15 +7,15 @@ font-l = 1.4em
 font-xl = 2em
 font-xxl = 3em
 
-fontfam1 = 'Josefin Sans', sans-serif;
-fontfam2 = 'Aclonica', sans-serif;
+fontfam1 = 'Roboto', sans-serif;
+fontfam2 = 'Fira Sans', sans-serif;
 
 color-white = #ffffff
 color-black = #000000
-color-letter = #333333
-color-first = #cb6cec
-color-second = #00c2cb
-color-third = #d58aeb
+color-letter = #0000
+color-first = #0f67f6
+color-second = rgb(0, 78, 204)
+color-third = #00368d
 
 
 movil = 'screen and (min-width: 576px)'
@@ -86,22 +88,7 @@ transition()
 .back-color-third
   background-color color-third
 
-//Estilos generales
-
-.border-s
-  border-width 1px
-  border solid
-
-.border-m
-  border-width 2px
-  border solid
-
-.border-l
-  border-width 3px
-  border solid
-
 //Letras
-
 .fontfam1
   font-family fontfam1
 .fontfam2
@@ -120,7 +107,6 @@ transition()
 .font-xxl
   font-size font-xxl
 
-
 //Estilos
 
 body
@@ -132,9 +118,4 @@ body
   padding 0 20px
   max-width 1024px
   margin auto
-
-.alto
-  height 80px
-  background color-white
-  @media tablet
-    height 160px
+  
