@@ -1,31 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@900&family=Roboto&display=swap');
 
-font-4xs = 0.3em
-font-3xs = 0.4em
-font-2xs = 0.5em
-font-xs = 0.7em
+font-2xs = 0.6em
+font-xs = 0.8em
 font-s = 1em
 font-m = 1.2em
 font-l = 1.4em
 font-xl = 2em
 font-xxl = 3em
 
-fontfam1 = 'Roboto', sans-serif;
-fontfam2 = 'Fira Sans', sans-serif;
+fontfam1 = 'Roboto', sans-serif
+fontfam2 = 'Fira Sans', sans-serif
 
 color-white = #ffffff
 color-black = #000000
-color-letter = #0000
+color-letter = #444444
 color-first = #0f67f6
 color-second = rgb(0, 78, 204)
 color-third = #00368d
 
-
-movil = 'screen and (min-width: 576px)'
-tablet = 'screen and (min-width: 768px)'
-escritorio-s = 'screen and (min-width: 992px)'
-escritorio-m = 'screen and (min-width: 1200px)'
-escritorio-l = 'screen and (min-width: 1400px)'
+movil = 'screen and (min-width  576px)'
+tablet = 'screen and (min-width  768px)'
+escritorio-s = 'screen and (min-width  992px)'
+escritorio-m = 'screen and (min-width  1200px)'
+escritorio-l = 'screen and (min-width  1400px)'
 
 *
   margin 0px
@@ -97,10 +94,6 @@ transition()
 .fontfam2
   font-family fontfam2
 
-.font-4xs
-  font-size font-4xs
-.font-3xs
-  font-size font-3xs
 .font-2xs
   font-size font-2xs
 .font-xs
@@ -121,7 +114,15 @@ transition()
 body
   color color-letter
   font-family fontfam1
-  font-size font-l
+  font-size font-xs
+  h2,h3,h4,h5,h6
+    font-family  fontfam2
+  a
+    text-decoration  none
+  li,ul
+    list-style  none
+  
+
 
 .container
   padding 0 20px
@@ -132,105 +133,147 @@ body
 //Cabecera - Titulo y cubos
 
 .header-home
-  position: relative
+  position  relative
   z-index 0
+
   .header-home__img
-    width: 100%
-    height: 100%
+    width  100%
+    height  100%
     z-index 0
-    opacity: 0.4
+    opacity  0.4
     .header-home_img--margin
-      width: 100%
-      height: 100%
-      object-fit: cover
+      width  100%
+      height  100%
+      object-fit  cover
 
 .hero 
-  background-color: #000000;
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  font-family: fontfam2
+  background-color  #000000
+  position  relative
+  height  100vh
+  overflow  hidden
+  font-family  fontfam2
   z-index 100
   @media escritorio-s
-    height: 80vh;
-    border-radius: 0% 0% 50% 50% / 0% 0% 50% 50%
-    border-bottom: 5px solid #312eeb
+    height  90vh
+    border-radius  0% 0% 50% 50% / 0% 0% 50% 50%
+    border-bottom  5px solid #312eeb
   
 
 .hero__text
-  color: #fff;
-  position: absolute;
-  text-align: center
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 50px;
-  z-index: 1;
+  color  #fff
+  position  absolute
+  text-align  center
+  top  50%
+  left  50%
+  transform  translate(-50%, -50%)
+  font-size  50px
+  z-index  1
 
 .hero__subtitle
-  margin-top: 20px
+  margin-top  20px
 
 .button
-  background: #312eeb
-  color: color-white
+  background  #312eeb
+  color  color-white
   border-radius 18px
-  font-size: font-3xs
-  padding: 5px 15px
-  text-decoration: none
+  font-size  font-3xs
+  padding  5px 15px
+  text-decoration  none
 
-.cube {
-  position: absolute;
-  top: 80vh;
-  left: 45vw;
-  width: 10px;
-  height: 10px;
-  border: solid 1px darken(#0040C1, 10%);
-  transform-origin: top left;
-  transform: scale(0) rotate(0deg) translate(-50%, -50%);
-  animation: cube 6s ease-in forwards infinite;
+.cube 
+  position  absolute
+  top  80vh
+  left  45vw
+  width  10px
+  height  10px
+  border  solid 1px darken(#0040C1, 10%)
+  transform-origin  top left
+  transform  scale(0) rotate(0deg) translate(-50%, -50%)
+  animation  cube 6s ease-in forwards infinite
   
-  &:nth-child(4n) {
-    border-color: lighten(#0040C1, 40%);
-  }
+  &:nth-child(4n) 
+    border-color  lighten(#0040C1, 40%)
   
-  &:nth-child(3) {
-    animation-delay: 0s;
-    left: 25vw;
-    top: 40vh;
-  }
   
-  &:nth-child(4) {
-    animation-delay: 1s;
-    left: 75vw;
-    top: 50vh;
-  }
+  &:nth-child(3) 
+    animation-delay  0s
+    left  25vw
+    top  40vh
   
-  &:nth-child(5) {
-    animation-delay: 0s;
-    left: 90vw;
-    top: 10vh;
-  }
   
-  &:nth-child(6) {
-    animation-delay: 1s;
-    left: 10vw;
-    top: 85vh;
-  }
+  &:nth-child(4) 
+    animation-delay  1s
+    left  75vw
+    top  50vh
   
-  &:nth-child(7) {
-    animation-delay: 2s;
-    left: 50vw;
-    top: 10vh;
-  }
-}
+  
+  &:nth-child(5) 
+    animation-delay  0s
+    left  90vw
+    top  10vh
+  
+  
+  &:nth-child(6) 
+    animation-delay  1s
+    left  10vw
+    top  85vh
+  
+  
+  &:nth-child(7) 
+    animation-delay  2s
+    left  50vw
+    top  10vh
+  
 
-@keyframes cube {
-  from {
-    transform: scale(0) rotate(0deg) translate(-50%, -50%);   
-    opacity: 1;
-  }
-  to {
-    transform: scale(20) rotate(960deg) translate(-50%, -50%); 
-    opacity: 0;
-  }
-}
+
+@keyframes cube 
+  from 
+    transform  scale(0) rotate(0deg) translate(-50%, -50%)   
+    opacity  1
+  
+  to 
+    transform  scale(20) rotate(960deg) translate(-50%, -50%) 
+    opacity  0
+
+
+// Servicios
+.services
+  width 100%
+  height 100%
+  display flex
+  justify-content center
+  align-items center
+  flex-wrap wrap
+  .services__box
+    width 200px
+    height 300px
+    padding 10px 5px
+    
+    a
+      .box__icon
+        width 100%
+        height 50px
+        padding: 0px 5px
+        img
+          width 100%
+          height 100%
+          object-fit: cover
+      .box__title
+        color color-black
+        padding: 10px 0px
+      .box__text
+        display -webkit-box
+        -webkit-line-clamp 5
+        -webkit-box-orient vertical
+        overflow hidden
+        text-overflow ellipsis
+        color color-letter
+        margin-bottom: 10px
+      .box__button
+        a
+          width: 100%
+          height: 100%
+          color color-first
+          margin-top: 10px
+
+
