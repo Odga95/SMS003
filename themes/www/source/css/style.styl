@@ -18,7 +18,7 @@ color-black = #000000
 color-letter = #444444
 color-first = #0f67f6
 color-second = rgb(0, 78, 204)
-color-third = #00368d
+color-third = #00245f
 
 movil = 'screen and (min-width  576px)'
 tablet = 'screen and (min-width  768px)'
@@ -131,7 +131,6 @@ body
     list-style  none
 
 .container
-  padding 0 20px
   max-width 1024px
   margin auto
 
@@ -230,6 +229,8 @@ body
 
 // Servicios
 .services
+  
+  padding 0px 20px
   position relative
   z-index 0
   margin-top -60px
@@ -293,6 +294,8 @@ body
   position absolute
   z-index -1
   
+  padding 0 20px
+  
 .circle
   position absolute
   width 105px
@@ -335,7 +338,7 @@ body
     left  5vw
     top  55%
     @media tablet
-      left  90%
+      left  85%
   &:nth-child(5) 
     right   0vw
     left auto
@@ -365,9 +368,10 @@ body
       transform scale(0)  
 
 .banner__text
+  padding 0 20px
   width 100%
   height 100%
-  padding 40px 20px
+  padding 40px 40px
   display flex
   flex-direction column
 
@@ -408,24 +412,67 @@ body
 
 .banner__text-image
   width 100%
-  height: 100vh
-  display: flex
-  .text
-    width: 45%
-    height: auto
-    margin auto
-    h2,h3,h4,h5,h6
-      font-size: font-xxl
-    p
-      line-height: 2
-      margin-bottom: 20px
-  .image
-    height: 100%;
+  display: block
+  .wave
     width: 100%
-    margin auto
-    @media tablet
-      width: 50%
-    img
+    height: auto
+    margin-top -5px
+    margin-bottom -5px
+  .box
+    height: 80vh
+    display: flex
+    background: color-third
+    .text
+      width: 45%
+      height: auto
+      margin auto
+      color color-white
+      padding-left: 40px
+      z-index 0
+      h2,h3,h4,h5,h6
+        font-size: font-xxl
+        margin-bottom: 20px
+        span 
+          color color-first
+      p
+        font-size: font-m
+        line-height: 2
+        margin-bottom: 20px
+        z-index 0
+    .image
+      z-index 0
+      padding-right: 40px
+      height: 100%;
       width: 100%
-      height: 100%
-      object-fit: cover;  
+      display: flex
+      justify-content: center
+      align-items: center
+      position relative
+
+      @media tablet
+        width: 50%
+      img
+        width: 450px
+        height: 450px
+        object-fit: cover;  
+        border-radius 30% 70% 70% 30% / 30% 30% 70% 70% 
+      .circles
+        top 0
+        left: 0
+        .circle
+          &:nth-child(1) 
+            left  0%
+            transform scale(1.5) 
+            z-index -10
+          &:nth-child(2) 
+            right  35vw
+            left auto
+            top  80%
+            transform scale(1.5)
+            z-index -10
+          &:nth-child(3) 
+            right 5vw
+            left  auto
+            top  40%
+            transform scale(1.8) 
+            z-index -10
