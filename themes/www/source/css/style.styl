@@ -122,8 +122,10 @@ body
   font-family fontfam1
   font-size font-xs
   h2,h3,h4,h5,h6
-    font-size font-l
+    font-size font-xxl
     font-family  fontfam2
+    span 
+      color color-first
     
   a
     text-decoration  none
@@ -227,8 +229,8 @@ body
     opacity  0
 
 
-// Servicios
-.services
+// Calidad - Segmento de cartas despues del Header
+.quality
   
   padding 0px 20px
   position relative
@@ -367,6 +369,8 @@ body
     @media tablet
       transform scale(0)  
 
+
+// Banner de texto tambien configurado para imagenes
 .banner__text
   padding 0 20px
   width 100%
@@ -410,6 +414,8 @@ body
   img:hover
     transform scale(1.01)
 
+
+// Banner con fondo de color con ondas + imagen al lado
 .banner__text-image
   width 100%
   display: block
@@ -476,3 +482,27 @@ body
             top  40%
             transform scale(1.8) 
             z-index -10
+
+// Servicios 
+
+.services
+  padding: 0px 40px
+  margin-bottom: 20px
+  text-align: center
+  display: flex
+  justify-content: center
+  align-items: center
+  color color-black
+  .services__box
+    width: 100%
+    height: 100%
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    .box
+      display: flex
+      padding: 40px 15px 
+      width: 
+
+
