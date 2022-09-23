@@ -140,7 +140,7 @@ body
 
 .header-home
   position  relative
-  z-index -1
+  z-index 0
 
   .header-home__img
     width  100%
@@ -184,6 +184,7 @@ body
   font-size  font-3xs
   padding  5px 15px
   text-decoration  none
+  z-index 1
 
 .cube
   position  absolute
@@ -298,7 +299,7 @@ body
 
   padding 0 20px
 
-.circle
+.circle,.circle2
   position absolute
   width 105px
   height 105px
@@ -689,6 +690,8 @@ body
 
 .banner__text2
   padding 0px
+  img
+    z-index -10
   .box
     color color-letter
     flex-direction: row-reverse
@@ -702,3 +705,77 @@ body
       font-size: font-l
       color color-black
 
+// Sección socios 
+.partners
+  max-width: 1024px
+  margin: auto
+  display: flex
+  justify-content: center
+  align-items: center
+  text-align: center
+  position: relative
+  color color-black
+  .circles
+    top 0
+    left 0
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+    margin-top 100px
+    .circle
+      display: flex
+      justify-content: center
+      align-items: center
+      filter: blur(0.3px)
+      z-index 0
+      position: relative
+      margin 40px 30px
+      transition 1s
+      .image
+        padding: 3px
+        opacity: 0.8 
+        width: 100%
+        height: 100%
+        border-radius 100%
+        position: absolute
+        top -0.4mm
+        left -0.4mm
+        filter: blur(0px)
+        z-index 100
+        transition 1s
+        object-fit: cover
+
+      &:nth-child(1),
+      &:nth-child(3),
+      &:nth-child(5),
+      &:nth-child(7),
+      &:nth-child(9),
+      &:nth-child(11),
+      &:nth-child(13),
+      &:nth-child(15),
+      &:nth-child(17),
+      &:nth-child(19)      
+        right: auto
+        left: auto
+        top 0
+        transform scale(1.5)
+
+      &:nth-child(2),
+      &:nth-child(4),
+      &:nth-child(6),
+      &:nth-child(8),
+      &:nth-child(10),
+      &:nth-child(12),
+      &:nth-child(14),
+      &:nth-child(16),
+      &:nth-child(18),
+      &:nth-child(20)
+        right: auto
+        left: auto
+        top 0
+        transform scale(1)
+    .circle:hover img,
+    .circle:hover
+      transform scale(1.2)
+      cursor: pointer
