@@ -122,11 +122,19 @@ body
   font-family fontfam1
   font-size font-xs
   h2,h3,h4,h5,h6
-    font-size font-xxl
     font-family  fontfam2
     span
       color color-first
-
+  h2
+    font-size: font-xxl
+  h3
+    font-size: font-xl
+  h4
+    font-size: font-l
+  h5
+    font-size: font-m
+  h6
+    font-size: font-s
   a
     text-decoration  none
   li,ul
@@ -159,6 +167,8 @@ body
   overflow  hidden
   font-family  fontfam2
   z-index 100
+  border-radius  0% 0% 10% 10% / 0% 0% 10% 10%
+  border-bottom  5px solid #312eeb
   @media escritorio-s
     height  100vh
     border-radius  0% 0% 50% 50% / 0% 0% 50% 50%
@@ -312,6 +322,7 @@ body
   background-position-x 1.5px
   background-position-y 1.5px
   transition all 0.5s ease-in-out;
+  overflow: hidden
   &:nth-child(1)
     right  10vw
     left auto
@@ -330,10 +341,12 @@ body
       top  60%
       left  0vw
   &:nth-child(3)
-    right 10vw
+    right 13vw
     left  auto
     top  40%
     transform scale(1.8)
+    @media movil
+      right 8vw
     @media tablet
       right 50%
       left  auto
@@ -373,14 +386,16 @@ body
 
 // Banner de texto tambien configurado para imagenes
 .banner__text,.banner__text2
-  width 100%
+  width 90%
   height 100%
-  padding 40px 40px
+  padding 40px 20px
   display flex
   flex-direction column
+  margin auto
+  @media tablet
+    padding 40px 40px
 
   h2,h3,h4,h5,h6
-    font-size font-xxl
     color color-black
     margin-bottom 20px
     span
@@ -416,7 +431,7 @@ body
 
 
 // Banner con fondo de color con ondas + imagen al lado
-.banner__text-image,.banner__text2
+.banner__text-image,.banner__text2,.banner__text-image2
   width 100%
   display flex
   flex-direction: column
@@ -426,19 +441,27 @@ body
     margin-top -5px
     margin-bottom -5px
   .box
-    height 80vh
+    height 100%
     display flex
     flex-direction: row
     background color-third
+    flex-direction: column-reverse
+    @media escritorio-s
+      flex-direction:  row-reverse
+      padding: 40px 40px 0px 40px
     .text
-      width 45%
+      width 95%
       height auto
       margin auto
       color color-white
-      padding-left 40px
-      z-index 0
+      padding 40px 5px
+      z-index 2
+      @media tablet
+        width 90%
+      @media escritorio-s
+        width 45%
+        padding-left 40px
       h2,h3,h4,h5,h6
-        font-size font-xxl
         margin-bottom 20px
         span
           color color-first
@@ -449,41 +472,57 @@ body
         z-index 0
     .image
       z-index 0
-      padding-right 40px
+      padding 40px
       height 100%;
       width 100%
       display flex
       justify-content center
       align-items center
       position relative
-
-      @media tablet
+      margin: auto
+      @media escritorio-s
         width 50%
+        padding-right 40px
       img
-        width 450px
-        height 450px
+        width 80%
+        height 100%
         object-fit cover;
-        border-radius 30% 70% 70% 30% / 30% 30% 70% 70%
+        border-radius 25px
+        @media escritorio-s
+          border-radius 30% 70% 70% 30% / 30% 30% 70% 70%
+          width 450px
+          height 450px
       .circles
         top 0
         left 0
+        z-index: -1
         .circle
           &:nth-child(1)
-            left  0%
+            left  10%
             transform scale(1.5)
             z-index -10
+            @media tablet
+              left  10%
           &:nth-child(2)
             right  35vw
             left auto
-            top  80%
+            top  99%
             transform scale(1.5)
             z-index -10
+            @media tablet
+              top  80%
           &:nth-child(3)
-            right 5vw
+            right 15vw
             left  auto
             top  40%
             transform scale(1.8)
             z-index -10
+            @media movil
+               right 15vw
+            @media tablet
+              right 8vw
+            @media escritorio-s
+              right: 0vw
 
 // Servicios
 
@@ -618,7 +657,6 @@ body
 
 
 // testimonials
-
 .testimonials
   display: flex
   justify-content: center
@@ -633,23 +671,29 @@ body
       color color-first
   .quotes
     margin 30px 00px 50px 0px
-  
+
   .testimonials__box
     max-width 1024px
     margin auto
     display: flex
     justify-content: center
     flex-wrap: wrap
-    gap 50px
+    gap 10px
+    @media movil
+      gap 50px
+      
     .box
-      width 400px
+      width 90%
       height: auto
       border-radius 25px
       padding: 20px 20px
       background: rgba(255, 255, 255, 0.075)
       box-shadow 0px 0px 200px 2px rgba(4, 29, 255, 0.089);
       -webkit-box-shadow 0px 0px 200px 2px rgba(4, 29, 255, 0.089);
-      -moz-box-shadow 0px 0px 200px 2px rgba(4, 29, 255, 0.089);     
+      -moz-box-shadow 0px 0px 200px 2px rgba(4, 29, 255, 0.089);
+      @media movil
+        width 400px
+        
       .box_user
         display: flex
         gap 20px
@@ -665,16 +709,16 @@ body
             height: 100%
             object-fit: cover
             border-radius 100%
-            
+
         .box__info
           max-width: 150px
           .box__info--name
             font-family fontfam2
-            font-size font-l   
-            color color-third  
-          .box__info--ocupation 
-            font-weight: 900  
-        svg 
+            font-size font-l
+            color color-third
+          .box__info--ocupation
+            font-weight: 900
+        svg
           display: flex
           margin-right: -5px;
           margin-left: auto;
@@ -690,12 +734,17 @@ body
 
 .banner__text2
   padding 0px
+  position relative
+  width 100%
   img
     z-index -10
   .box
+    position relative
     color color-letter
     flex-direction: row-reverse
     background: #d2e3ff
+    
+    height: 100%
     .text
       margin-top: -20px
       margin-bottom: -20px
@@ -705,24 +754,25 @@ body
       font-size: font-l
       color color-black
 
-// Sección socios 
+// Sección socios
 .partners
+  padding: 40px 0px
   max-width: 1024px
   margin: auto
   display: flex
+  flex-direction: column
   justify-content: center
   align-items: center
   text-align: center
   position: relative
   color color-black
   .circles
-    top 0
-    left 0
+    position: relative
     display: flex
     justify-content: center
     align-items: center
     flex-wrap: wrap
-    margin-top 100px
+    margin-top 50px
     .circle
       display: flex
       justify-content: center
@@ -734,7 +784,7 @@ body
       transition 1s
       .image
         padding: 3px
-        opacity: 0.8 
+        opacity: 0.8
         width: 100%
         height: 100%
         border-radius 100%
@@ -755,7 +805,7 @@ body
       &:nth-child(13),
       &:nth-child(15),
       &:nth-child(17),
-      &:nth-child(19)      
+      &:nth-child(19)
         right: auto
         left: auto
         top 0
@@ -779,3 +829,103 @@ body
     .circle:hover
       transform scale(1.2)
       cursor: pointer
+
+//botón de contacto
+
+.contact-button
+  display: flex
+  height: 100%
+  width: 90%
+  background: color-third
+  color white
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  border-radius 25px
+  padding: 10px 20px
+  gap 10px
+  background-image: url("../img/lowpoly.svg")
+  background-repeat no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  margin auto
+  margin-top 120px
+  margin-bottom 120px
+  text-align: center
+  @media tablet
+    margin-top 100px
+   margin-bottom 100px
+  @media escritorio-s
+    margin-top 70px
+    margin-bottom 70px
+
+  a
+    text-decoration: none
+  .button
+    font-size: 2vw
+    margin-top:  20px
+    font-family: fontfam2
+    transition 0.7s
+    background: color-white
+    color color-third
+
+  .button:hover
+    transform scale(1.2)
+
+// texto imagen con fondo
+
+.banner__text-image2
+  padding: 40px
+  display: flex
+  flex-direction: column-reverse
+  justify-content: center
+  align-items: center
+  color color-black
+  gap 40px
+  padding: 20px 50px
+  @media escritorio-s
+    flex-direction:  row-reverse
+    padding: 40px
+    padding: 20px 80px
+    
+  .image
+    width: 100%
+    height: 100%
+    @media escritorio-s
+      width 50%
+    img
+      border-radius 25px
+      width: 100%
+      height: 100%
+      object-fit: cover
+      @media escritorio-s
+        border-radius 16% 84% 75% 25% / 41% 41% 59% 59% 
+  .text
+    width: 100%
+    height: 100%
+    padding: 0px 20px
+    @media escritorio-s
+      width 50%
+      height: 100%
+    h2,h3,h4,h5,h6
+      margin-bottom: 30px
+    p
+      line-height: 2
+      font-size font-m
+      margin-bottom 20px
+
+  .button
+    width fit-content
+    font-size: font-l
+    padding: 10px 20px 
+    font-family: fontfam2
+    z-index: 10
+    display: block
+    margin-left: 0px
+    transition 0.5s
+    @media escritorio-s
+      margin-left: auto
+      margin-right: 0%
+      
+  .button:hover
+    transform scale(1.2)
