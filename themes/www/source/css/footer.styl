@@ -1,3 +1,8 @@
+color-transparent = rgba(255, 255, 255, 0)
+
+.color-transparent
+  display block
+
 
 footer
   background-image: url("../img/wavesfooter.svg")
@@ -11,7 +16,7 @@ footer
     justify-content: center
     text-align: center
     width: 100%
-    height: fit-content
+    height: 100%
     flex-wrap: wrap
 
     .company
@@ -36,8 +41,70 @@ footer
           object-fit: cover
       .button
         font-size: font-l
+    .social-networks
+      color color-white
+      width: 90%
+      padding 20px
+      line-height: 2
+      text-align: justify
+      height: 100%
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      p
+        font-family: fontfam1
+        width 100%
+        margin 0px
+        text-align: center
+        font-weight: 600
+        font-size: font-l 
+      @media movil
+        width: 50%
+      @media tablet
+        width: 33%
+      @media escritorio-s
+        width: 25%
+      a
+        color color-white
+        display: flex
+        width: 40px
+        height: 40px
+        border 2px solid white
+        border-radius: 5px
+        padding 2px
+        justify-content: center
+        text-align: center
+        align-items: center
+        margin 5px
 
-
-
-
-
+    .oficial-info
+      color color-white
+      width: 90%
+      padding 20px
+      line-height: 2
+      text-align: justify
+      height: 100%
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      p
+        font-family: fontfam1
+        width 100%
+        margin 0px
+        text-align: center
+        font-weight: 600
+        font-size: font-l
+      @media movil
+        width: 50%
+      @media tablet
+        width: 33%
+      @media escritorio-s
+        width: 25%
+      .location,.contact,.email
+        display: flex
+        justify-content: center
+        align-items: center 
+        gap 20px
+    .fa-solid
+      font-size: font-l
+    
