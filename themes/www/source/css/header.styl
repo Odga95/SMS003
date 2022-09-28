@@ -1,6 +1,11 @@
 @import 'style.styl';
 @import 'footer.styl';
 
+.d-flex
+  transition 1s
+  display: flex
+  align-items: center
+  
 header
     position absolute
     width: 100%
@@ -18,30 +23,34 @@ header
             padding: 5px 0px
             height: fit-content
             background: rgb(255, 255, 255)
-            @media tablet
+            @media escritorio-s
                 padding: 5px 0px
         .menu
             width: 100%
             display flex
             justify-content: right 
             align-items: center
-            height: 30px
+            height: 40px
+            z-index: 100
+            position relative
             img
                 margin-top: auto
                 margin-bottom: auto
                 height: 100%
-                width: 200px
-            @media tablet
+                width: auto
+            @media escritorio-s
                 display none
             img
                 margin-right: 20px
+                margin-left: auto
+                
         .navbar-fixed-top
             background: white
             position: fixed
             width: 100%
             transition: 1s
             -webkit-box-shadow: 0px 3px 5px -1px hsla(0, 0%, 0%, 0.2);
-            @media tablet
+            @media escritorio-s
                 padding: 15px 0px
         .navbar-brand
             position: absolute
@@ -49,7 +58,7 @@ header
             transform: translate(15%, -50%);
             height:40px
             width: 150px
-            @media tablet 
+            @media escritorio-s 
                 height:65px
                 width: 150px
                 margin-top: auto
@@ -67,14 +76,14 @@ header
             margin-top 49px
             z-index 1000
             transition 1s
-            @media tablet
+            justify-content: center
+            align-items: center
+            @media escritorio-s
                 display: flex
                 opacity: 1
                 position relative
                 margin-top 0px
-            justify-content: center
-            align-items: center
-            @media tablet
+            @media escritorio-s
                 display flex
             li
                 border-bottom:  1px solid color-letter
@@ -82,7 +91,7 @@ header
                 background: white
                 position: relative
                 padding: 0px 20px;
-                @media tablet
+                @media escritorio-s
                     background: transparent
                     border none
                 a
@@ -99,6 +108,8 @@ header
                     font-weight: 600;
                     display: block
                     width: 100%
+                .angle
+                   width: fit-content
                 a:hover
                     color: color-first
 

@@ -1,32 +1,37 @@
 header
     .bg-color.back-color-white
         nav.navbar
-            .d-flex
-                a.navbar-brand.color-letter(href='#') 
-                    img(src="/img/preview.jpg", alt="")
+            .d-flex.color-letter
+                a.navbar-brand(href='#') 
+                    img(src="/img/negrologo.svg", alt="")
                 ul.navbar-nav
                     li
-                        a.color-letter(href='/index') Home
+                        a(href='/index') Home
                     li
-                        a.color-letter(href='/service') Service
+                        .d-flex
+                            a.angle(href='/service') Service
+                            <i class="fa-solid fa-angle-right"></i>
                         .subMenu
+                            
                             ul
                                 li
-                                    a.color-letter(href='/contact') Contact Us1
+                                    a(href='/contact') Contact Us1
                                 li
-                                    a.color-letter(href='/contact') Contactd sadffasdfa sadffasdfa sdfContactdsadffasdfasdf 
+                                    a(href='/contact') Contactd sadffasdfa sadffasdfa sdfContactdsadffasdfasdf 
                                 li
-                                    a.color-letter(href='/contact') Contact Us3
+                                    a(href='/contact') Contact Us3
                     li
-                        a.color-letter(href='/blog') Blog
+                        a(href='/blog') Blog
                     li
-                        a.color-letter(href='/about') About
+                        a(href='/about') About
                     li
-                        a.color-letter(href='/contact') Contact Us
+                        a(href='/contact') Contact Us
                         
                     
                     li
-                        a.color-letter(href='/about') About
+                        a(href='/about') About
                 
                 .menu
-                    //- img(src="/img/menu.svg", alt="")
+                    img.icon-menu(src="/img/menu.svg", alt="")
+                    
+                        
