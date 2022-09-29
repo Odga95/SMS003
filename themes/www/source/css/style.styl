@@ -126,15 +126,15 @@ body
     span
       color color-first
   h2
-    font-size: font-xxl
+    font-size font-xxl
   h3
-    font-size: font-xl
+    font-size font-xl
   h4
-    font-size: font-l
+    font-size font-l
   h5
-    font-size: font-m
+    font-size font-m
   h6
-    font-size: font-s
+    font-size font-s
   a
     text-decoration  none
   li,ul
@@ -143,6 +143,11 @@ body
 .container
   max-width 1024px
   margin auto
+
+
+//////////////////////////////////
+// HOME //////////////////////////
+//////////////////////////////////
 
 //Cabecera - Titulo y cubos
 
@@ -324,7 +329,7 @@ body
   background-position-x 1.5px
   background-position-y 1.5px
   transition all 0.5s ease-in-out;
-  overflow: hidden
+  overflow hidden
   &:nth-child(1)
     right  10vw
     left auto
@@ -436,7 +441,7 @@ body
 .banner__text-image,.banner__text2,.banner__text-image2
   width 100%
   display flex
-  flex-direction: column
+  flex-direction column
   .wave
     width 100%!important
     height auto
@@ -445,12 +450,12 @@ body
   .box
     height 100%
     display flex
-    flex-direction: row
+    flex-direction row
     background color-third
-    flex-direction: column-reverse
+    flex-direction column-reverse
     @media escritorio-s
-      flex-direction:  row-reverse
-      padding: 40px 40px 0px 40px
+      flex-direction  row-reverse
+      padding 40px 40px 0px 40px
     .text
       width 95%
       height auto
@@ -481,7 +486,7 @@ body
       justify-content center
       align-items center
       position relative
-      margin: auto
+      margin auto
       @media escritorio-s
         width 50%
         padding-right 40px
@@ -497,7 +502,7 @@ body
       .circles
         top 0
         left 0
-        z-index: -1
+        z-index -1
         .circle
           &:nth-child(1)
             left  10%
@@ -524,7 +529,7 @@ body
             @media tablet
               right 8vw
             @media escritorio-s
-              right: 0vw
+              right 0vw
 
 // Servicios
 
@@ -546,7 +551,7 @@ body
     justify-content center
     align-items center
     padding 40px 0px
-    position: relative
+    position relative
     .box
       position relative
       display flex
@@ -554,9 +559,9 @@ body
       height 340px
       transition 1s
       margin 15px
-      background: blue
+      background blue
       border-radius 25px
-      overflow: hidden
+      overflow hidden
     .box:hover
       box-shadow 0px 0px 6px 2px rgb(0, 0, 0);
       -webkit-box-shadow 0px 0px 6px 2px rgb(0, 0, 0);
@@ -564,19 +569,19 @@ body
     .box:hover .waveCard
       top -190px
       width 210px
-      height: 100% !important
-      left: -3px
+      height 100% !important
+      left -3px
     .box:hover .box__content
       margin-top -50px
     .box:hover .box__icon
       margin-top 23px
-      height: 40px
+      height 40px
     .box:hover a
-      opacity: 1
-      bottom:  20px
+      opacity 1
+      bottom  20px
 
     .waveCard
-      position: absolute
+      position absolute
       top 0
       left 0
       width 200px
@@ -585,22 +590,22 @@ body
       object-fit cover
       transition 1s
       z-index 0
-      opacity: 0.5
+      opacity 0.5
     .box__content
-      width: 100%
-      height: 100%
-      display: flex
-      justify-content: end
-      text-align: left
-      flex-direction: column
-      z-index: 1
+      width 100%
+      height 100%
+      display flex
+      justify-content end
+      text-align left
+      flex-direction column
+      z-index 1
       color color-white
       padding 30px 20px
       transition 1s
 
       h3
-        font-size: font-l
-        margin-bottom: 20px
+        font-size font-l
+        margin-bottom 20px
       p
         display -webkit-box
         -webkit-line-clamp 5
@@ -609,37 +614,37 @@ body
         text-overflow ellipsis
         line-height 1.5
     .box__icon,.box__icon2
-      position: absolute
+      position absolute
       top 0
       left 0
-      width: 100%
-      height: 50px
+      width 100%
+      height 50px
       margin-top 40px
       transition 1s
-      z-index: 0
+      z-index 0
       img
-        fill: white
+        fill white
     .box__icon
       transform scale(1.2)
 
     // botón animado
     a
-      display: flex
-      width: 100%
-      height: auto
-      position: absolute
-      bottom:  0
+      display flex
+      width 100%
+      height auto
+      position absolute
+      bottom  0
       left 0
       color white
       z-index 1
       opacity 0
       transition 1s
-      justify-content: center
-      align-items: center
+      justify-content center
+      align-items center
       svg
         transform scale(1.4)
-        margin-left: 10px
-        font-weight: blod
+        margin-left 10px
+        font-weight blod
 
 // giro card animación
 
@@ -660,16 +665,16 @@ body
 
 // testimonials
 .testimonials
-  display: flex
-  justify-content: center
-  align-items: center
-  flex-direction: column
+  display flex
+  justify-content center
+  align-items center
+  flex-direction column
   .title
-    width: 100%
-    height: 100%
-    padding-top: 50px
+    width 100%
+    height 100%
+    padding-top 50px
     h2
-      text-align: center
+      text-align center
       color color-first
   .quotes
     margin 30px 00px 50px 0px
@@ -677,19 +682,19 @@ body
   .testimonials__box
     max-width 1024px
     margin auto
-    display: flex
-    justify-content: center
-    flex-wrap: wrap
+    display flex
+    justify-content center
+    flex-wrap wrap
     gap 10px
     @media movil
       gap 50px
       
     .box
       width 90%
-      height: auto
+      height auto
       border-radius 25px
-      padding: 20px 20px
-      background: rgba(255, 255, 255, 0.075)
+      padding 20px 20px
+      background rgba(255, 255, 255, 0.075)
       box-shadow 0px 0px 200px 2px rgba(4, 29, 255, 0.089);
       -webkit-box-shadow 0px 0px 200px 2px rgba(4, 29, 255, 0.089);
       -moz-box-shadow 0px 0px 200px 2px rgba(4, 29, 255, 0.089);
@@ -697,40 +702,40 @@ body
         width 400px
         
       .box_user
-        display: flex
+        display flex
         gap 20px
-        margin-bottom: 15px
+        margin-bottom 15px
         .box__img
           width 70px
-          height: 70px
-          padding: 2px
+          height 70px
+          padding 2px
           border 2px solid color-third
           border-radius 100%
           img
             width 100%
-            height: 100%
-            object-fit: cover
+            height 100%
+            object-fit cover
             border-radius 100%
 
         .box__info
-          max-width: 150px
+          max-width 150px
           .box__info--name
             font-family fontfam2
             font-size font-l
             color color-third
           .box__info--ocupation
-            font-weight: 900
+            font-weight 900
         svg
-          display: flex
-          margin-right: -5px;
-          margin-left: auto;
+          display flex
+          margin-right -5px;
+          margin-left auto;
       .box__content
         display -webkit-box
         -webkit-line-clamp 3
         -webkit-box-orient vertical
         overflow hidden
         text-overflow ellipsis
-        font-size: font-l
+        font-size font-l
         line-height 1.5
         color color-letter
 
@@ -743,60 +748,60 @@ body
   .box
     position relative
     color color-letter
-    flex-direction: row-reverse
-    background: #d2e3ff
+    flex-direction row-reverse
+    background #d2e3ff
     
-    height: 100%
+    height 100%
     .text
-      margin-top: -20px
-      margin-bottom: -20px
-      width: 80%
-      text-align: justify
+      margin-top -20px
+      margin-bottom -20px
+      width 80%
+      text-align justify
       p
-      font-size: font-l
+      font-size font-l
       color color-black
 
 // Sección socios
 .partners
-  padding: 40px 0px
-  max-width: 1024px
-  margin: auto
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: center
-  text-align: center
-  position: relative
+  padding 40px 0px
+  max-width 1024px
+  margin auto
+  display flex
+  flex-direction column
+  justify-content center
+  align-items center
+  text-align center
+  position relative
   color color-black
   .circles
-    position: relative
-    display: flex
-    justify-content: center
-    align-items: center
-    flex-wrap: wrap
+    position relative
+    display flex
+    justify-content center
+    align-items center
+    flex-wrap wrap
     margin-top 50px
     .circle
-      display: flex
-      justify-content: center
-      align-items: center
-      filter: blur(0.3px)
+      display flex
+      justify-content center
+      align-items center
+      filter blur(0.3px)
       z-index 0
-      position: relative
+      position relative
       margin 40px 30px
       transition 1s
       .image
-        padding: 3px
-        opacity: 0.8
-        width: 100%
-        height: 100%
+        padding 3px
+        opacity 0.8
+        width 100%
+        height 100%
         border-radius 100%
-        position: absolute
+        position absolute
         top -0.4mm
         left -0.4mm
-        filter: blur(0px)
+        filter blur(0px)
         z-index 100
         transition 1s
-        object-fit: cover
+        object-fit cover
 
       &:nth-child(1),
       &:nth-child(3),
@@ -808,8 +813,8 @@ body
       &:nth-child(15),
       &:nth-child(17),
       &:nth-child(19)
-        right: auto
-        left: auto
+        right auto
+        left auto
         top 0
         transform scale(1.5)
 
@@ -823,37 +828,37 @@ body
       &:nth-child(16),
       &:nth-child(18),
       &:nth-child(20)
-        right: auto
-        left: auto
+        right auto
+        left auto
         top 0
         transform scale(1)
     .circle:hover img,
     .circle:hover
       transform scale(1.2)
-      cursor: pointer
+      cursor pointer
 
 //botón de contacto
 
 .contact-button
-  display: flex
-  height: 100%
-  width: 90%
-  background: color-third
+  display flex
+  height 100%
+  width 90%
+  background color-third
   color white
-  justify-content: center
-  align-items: center
-  flex-direction: column
+  justify-content center
+  align-items center
+  flex-direction column
   border-radius 25px
-  padding: 10px 20px
+  padding 10px 20px
   gap 10px
-  background-image: url("../img/lowpoly.svg")
+  background-image url("../img/lowpoly.svg")
   background-repeat no-repeat;
-  background-position: 50% 0;
-  background-size: cover;
+  background-position 50% 0;
+  background-size cover;
   margin auto
   margin-top 120px
   margin-bottom 120px
-  text-align: center
+  text-align center
   @media tablet
     margin-top 100px
    margin-bottom 100px
@@ -862,13 +867,13 @@ body
     margin-bottom 70px
 
   a
-    text-decoration: none
+    text-decoration none
   .button
-    font-size: 2vw
-    margin-top:  20px
-    font-family: fontfam2
+    font-size 2vw
+    margin-top  20px
+    font-family fontfam2
     transition 0.7s
-    background: color-white
+    background color-white
     color color-third
 
   .button:hover
@@ -877,57 +882,129 @@ body
 // texto imagen con fondo
 
 .banner__text-image2
-  padding: 40px
-  display: flex
-  flex-direction: column-reverse
-  justify-content: center
-  align-items: center
+  padding 40px
+  display flex
+  flex-direction column-reverse
+  justify-content center
+  align-items center
   color color-black
   gap 40px
-  padding: 20px 50px
+  padding 20px 50px
   @media escritorio-s
-    flex-direction:  row-reverse
-    padding: 40px
-    padding: 20px 80px
+    flex-direction  row-reverse
+    padding 40px
+    padding 20px 80px
     
   .image
-    width: 100%
-    height: 100%
+    width 100%
+    height 100%
     @media escritorio-s
       width 50%
     img
       border-radius 25px
-      width: 100%
-      height: 100%
-      object-fit: cover
+      width 100%
+      height 100%
+      object-fit cover
       @media escritorio-s
         border-radius 16% 84% 75% 25% / 41% 41% 59% 59% 
   .text
-    width: 100%
-    height: 100%
-    padding: 0px 20px
+    width 100%
+    height 100%
+    padding 0px 20px
     @media escritorio-s
       width 50%
-      height: 100%
+      height 100%
     h2,h3,h4,h5,h6
-      margin-bottom: 30px
+      margin-bottom 30px
     p
-      line-height: 2
+      line-height 2
       font-size font-m
       margin-bottom 20px
 
   .button
     width fit-content
-    font-size: font-l
-    padding: 10px 20px 
-    font-family: fontfam2
-    z-index: 10
-    display: block
-    margin-left: 0px
+    font-size font-l
+    padding 10px 20px 
+    font-family fontfam2
+    z-index 10
+    display block
+    margin-left 0px
     transition 0.5s
     @media escritorio-s
-      margin-left: auto
-      margin-right: 0%
+      margin-left auto
+      margin-right 0%
       
   .button:hover
     transform scale(1.2)
+
+
+//////////////////////////////////
+// BLOG //////////////////////////
+//////////////////////////////////
+
+.blog 
+  width 100%
+  height 100%
+  display flex
+  justify-content center
+  align-items center
+  .blogs
+    width 75%
+    height 100%
+    display flex
+    flex-direction column
+    padding 150px 15px 40px 15px
+    h1
+      font-family fontfam2
+      color color-first
+      font-size 50px
+      margin-bottom 70px
+    .blog__box 
+      width 100%
+      height 100%
+      hr
+        border-color:  rgba(236, 236, 236, 0.39)
+        padding: 0px 20px
+      .image
+        background white
+        width 100%
+        height 400px
+        margin-bottom 15px
+        img
+          width 100%
+          height 100%
+          object-fit cover
+          border-top-left-radius 25px
+          border-top-right-radius 25px
+      .info
+        width 100%
+        height 100%
+        display: flex
+        padding: 5px 15px
+        .fecha,
+        .author,
+        .tag
+          width fit-content
+          height 100%
+          display: flex
+          justify-content: left
+          align-items: center
+          margin-right: 15px
+          .fecha--icon
+            width: 32px
+            height: 32px
+            margin-right: 5px
+          p,a
+            font-size: font-m
+            span
+              font-weight: 600
+              color rgb(70, 70, 70)
+          a
+            color color-first
+        // .author
+        // .tag
+
+
+
+  
+

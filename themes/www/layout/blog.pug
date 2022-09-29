@@ -1,0 +1,34 @@
+extends includes/layout
+
+block body-header
+  include includes/header
+
+block body-main
+  .blog
+    .blogs 
+      h1 Blog
+      .blog__box 
+        .image
+          img(src="https://img.freepik.com/foto-gratis/grupo-personas-trabajando-plan-negocios-oficina_1303-15861.jpg?w=740&t=st=1664487096~exp=1664487696~hmac=a80d0f7afc84182c5e13359a18ded8b2b20dc5875d29457f9bd1bccafcb4f401", alt="", srcset="")
+        .info
+          .fecha 
+            img.fecha--icon(src="/img/ico/watch.svg", alt="iwatch icon")
+            p Sept 30, 2022
+          .author 
+            img.fecha--icon(src="/img/ico/by.svg", alt="article icon")
+            p By 
+              span David Burbano
+          .tag 
+            img.fecha--icon(src="/img/ico/tag.svg", alt="tag icon")
+            a(href="/") Diseñando webs
+        hr
+        .title 
+        .content
+        a.button(href="/") Seguir leyendo...
+        
+
+    .sidebar
+  .recents
+
+block body-footer
+  include includes/footer
