@@ -110,16 +110,31 @@ header
                     width: 100%
                 .angle
                    width: fit-content
+                   margin-right: 10px
+                   @media escritorio-s
+                        margin-right: 0px
+                .fa-solid
+                   transition 0.5s
+                   @media escritorio-s
+                        width: 0px
+                        display none
+                .fa-solid:hover 
+                    color: color-first
+                    transform: scale(.8)
+                    transform: rotate(90deg)
+
                 a:hover
                     color: color-first
 
                 .subMenu
-                    position absolute
-                    left 50%
-                    top 50%
-                    display: none
+                    display: block
                     z-index 2
                     min-width: 100%
+                    @media escritorio-s
+                       display: none 
+                       left 50%
+                        top 50%
+                       position absolute
 
                     ul
                         position relative
