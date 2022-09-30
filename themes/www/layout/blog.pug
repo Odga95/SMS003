@@ -4,30 +4,115 @@ block body-header
   include includes/header
 
 block body-main
+  //- Contenedor del blog
   .blog
     .blogs 
       h1 Blog
       .blog__box 
         .image
-          img(src="https://img.freepik.com/foto-gratis/grupo-personas-trabajando-plan-negocios-oficina_1303-15861.jpg?w=740&t=st=1664487096~exp=1664487696~hmac=a80d0f7afc84182c5e13359a18ded8b2b20dc5875d29457f9bd1bccafcb4f401", alt="", srcset="")
+          img(src="https://img.freepik.com/foto-gratis/grupo-personas-trabajando-plan-negocios-oficina_1303-15861.jpg?w=740&t=st=1664487096~exp=1664487696~hmac=a80d0f7afc84182c5e13359a18ded8b2b20dc5875d29457f9bd1bccafcb4f401" alt="" srcset="")
         .info
           .fecha 
-            img.fecha--icon(src="/img/ico/watch.svg", alt="iwatch icon")
+            img.fecha--icon(src="/img/ico/watch.svg" alt="iwatch icon")
             p Sept 30, 2022
           .author 
-            img.fecha--icon(src="/img/ico/by.svg", alt="article icon")
+            img.fecha--icon(src="/img/ico/by.svg" alt="article icon")
             p By 
               span David Burbano
           .tag 
-            img.fecha--icon(src="/img/ico/tag.svg", alt="tag icon")
+            img.fecha--icon(src="/img/ico/tag.svg" alt="tag icon")
             a(href="/") Diseñando webs
         hr
         .title 
+          h2 Quisque feugiat tortor non nulla viverra pulvinar.
         .content
-        a.button(href="/") Seguir leyendo...
-        
-
+          p Quisque consectetur sem sit amet quam placerat, eu convallis ipsum placerat. Curabitur id placerat tortor. Vivamus pulvinar nisi quis vulputate molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In vestibulum porta dolor, vel mattis eros commodo ut. Suspendisse ullamcorper facilisis urna, ut tristique tellus aliquet at. Fusce sit amet mauris odio.
+          a.button(href="/") Seguir leyendo...
     .sidebar
+      .recent
+        h3 Recientes
+        hr
+        ul 
+          li 
+            .recent__item
+              .image
+                img(src="https://img.freepik.com/foto-gratis/retrato-mujer-trabajadora-servicio-al-cliente_144627-37943.jpg?w=740&t=st=1664554266~exp=1664554866~hmac=304900bc761d2e19b7cbf20714aa913b85f753c2df5cdefa3fef247636b11abe" alt="")
+              .content 
+                h4 Fusce sit amet mauris odio.
+                .date 
+                  img.fecha--icon(src="/img/ico/watch.svg" alt="iwatch icon")
+                  p Sept 30, 2022
+            hr
+          li 
+            .recent__item
+              .image
+                img(src="https://img.freepik.com/foto-gratis/vista-lateral-hombre-recibiendo-tazas-cafe_23-2149663654.jpg?w=740&t=st=1664554285~exp=1664554885~hmac=6188d67cbc377415602589d757f88b8ae303790615da59a454dfe507eb1594cb" alt="")
+              .content 
+                h4 Fusce sit amet mauris odio.
+                .date 
+                  img.fecha--icon(src="/img/ico/watch.svg" alt="iwatch icon")
+                  p Sept 30, 2022
+            hr
+          li 
+            .recent__item
+              .image
+                img(src="https://img.freepik.com/foto-gratis/pareja-joven-pasando-automovil-sala-exposicion-automoviles_1303-15127.jpg?w=740&t=st=1664554282~exp=1664554882~hmac=1b29f7054e2d6d545aeb5ce079e72e0bb79834510bf39e299c33897bb5e1c5e8" alt="")
+              .content 
+                h4 Fusce sit amet mauris odio.
+                .date 
+                  img.fecha--icon(src="/img/ico/watch.svg" alt="iwatch icon")
+                  p Sept 30, 2022
+            hr
+          li 
+            .recent__item
+              .image
+                img(src="https://img.freepik.com/foto-gratis/objeto-abstracto-aplicacion-web-social-aplicacion_1418-520.jpg?w=740&t=st=1664554274~exp=1664554874~hmac=1df9a1c8fddae81e0d30f701c9f8a41376ac5b323c7b4b9edb7576952b8a8323" alt="")
+              .content 
+                h4 Fusce sit amet mauris odio.
+                .date 
+                  img.fecha--icon(src="/img/ico/watch.svg" alt="iwatch icon")
+                  p Sept 30, 2022
+            hr
+
+
+      .cat-tag
+        h3 Categories 
+        hr
+        .container-cat-tag
+          ul 
+            li 
+              a(href="/") work
+            li 
+              a(href="/") business
+            li 
+              a(href="/") technology
+            li 
+              a(href="/") International business
+            li 
+              a(href="/") UI / UX
+
+      .cat-tag
+        h3 Tags
+        hr
+        .container-cat-tag
+          ul 
+            li 
+              a(href="/") technology
+            li 
+              a(href="/") International business
+            li 
+              a(href="/") UI / UX
+            li 
+              a(href="/") work
+            li 
+              a(href="/") business
+            li 
+              a(href="/") technology
+            li 
+              a(href="/") International business
+            li 
+              a(href="/") UI / UX
+
   .recents
 
 block body-footer

@@ -837,8 +837,7 @@ body
       transform scale(1.2)
       cursor pointer
 
-//botón de contacto
-
+//botón de contacto con fondo
 .contact-button
   display flex
   height 100%
@@ -943,11 +942,16 @@ body
 //////////////////////////////////
 
 .blog 
-  width 100%
+  width 90%
   height 100%
   display flex
   justify-content center
-  align-items center
+  align-items flex-start
+  flex-direction: row-reverse
+  margin auto
+  @media escritorio-s
+    max-width: 1224px
+
   .blogs
     width 75%
     height 100%
@@ -959,12 +963,16 @@ body
       color color-first
       font-size 50px
       margin-bottom 70px
+
+// CONTENIDO BLOG - COLUMNA DERECHA - BLOGS
     .blog__box 
       width 100%
       height 100%
       hr
         border-color:  rgba(236, 236, 236, 0.39)
-        padding: 0px 20px
+        width: 90%
+        margin auto
+        margin-top:  5px
       .image
         background white
         width 100%
@@ -977,10 +985,11 @@ body
           border-top-left-radius 25px
           border-top-right-radius 25px
       .info
-        width 100%
+        width 90%
         height 100%
         display: flex
-        padding: 5px 15px
+        padding: 5px 0px
+        margin auto
         .fecha,
         .author,
         .tag
@@ -1001,9 +1010,122 @@ body
               color rgb(70, 70, 70)
           a
             color color-first
-        // .author
-        // .tag
+      .title,
+      .content
+        width: 90%
+        height: 100%
+        margin: auto
+        color color-black
+        margin-bottom: 20px
+      .content
+        color color-letter
+        line-height: 2
+        display -webkit-box
+        -webkit-line-clamp 5
+        -webkit-box-orient vertical
+        overflow hidden
+        text-overflow ellipsis
+        p
+          margin-bottom: 15px
+        .button
+          font-size: font-l
+          font-family: fontfam2
+// CONTENIDO BLOG - COLUMNA DERECHA - TAGS/CATEGORIES
+  .sidebar
+    width: 25%
+    height: 100%
+    display: flex
+    padding 150px 15px 40px 15px
+    flex-direction: column
+    hr 
+      border-color rgba(0, 89, 255, 0.5)
+      width 50%
+      margin-bottom: 20px
 
+// Blogs recientes
+    .recent
+      h3
+        color color-black
+      ul
+        width: 100%
+        height: 100%
+        margin-bottom: 10px
+        li
+          .recent__item
+            width: 100%
+            height: 100%
+            display: flex
+            justify-content: center
+            align-items: flex-start
+            .image
+              width: 78px
+              height: 78px
+              margin-right: 10px
+              img
+                width: 100%
+                height: 100%
+                object-fit: cover
+            .content
+              h4
+                font-size: font-m
+                color color-black
+              .date
+                display: flex
+                justify-content: left
+                align-items: center
+                margin-left -4px
+          hr
+            border none
+            border-top 0.2mm solid rgba(0, 0, 0, 0.096)
+            width: 100%
+            margin-top 20px
+// Categorías / Tags
+    .cat-tag
+      width: 95%
+      height: 100%
+      margin 50px 0px
+      h3
+        color color-black
+        margin-bottom: 5px
+      .container-cat-tag
+        ul
+          width: 100%
+          height: 100%
+          display: flex
+          flex-wrap: wrap
+          li
+            list-style: none
+            width: fit-content
+            margin 8.25px 2.5px
+            a
+              border 1px solid rgba(196, 196, 196, 0.356)
+              color color-black
+              padding: 5px 8px
+              text-transform: capitalize
+              font-weight: 900
+              font-size: font-m
+              transition 0.2s
+            a:hover
+              background: color-first
+              border none
+              color white
+              
+//////////////////////////////////
+// CONTACT ///////////////////////
+//////////////////////////////////
+
+.contact
+  // header con imagen
+  .contact__header
+    width: 100%
+    height: 50vh
+  // .contact__sidebar
+  // .contact__form
+
+
+
+
+      
 
 
   
