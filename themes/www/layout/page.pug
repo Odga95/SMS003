@@ -1,0 +1,54 @@
+extends includes/layout
+
+block body-header
+  include includes/header
+
+block body-main
+  .header2 
+    //- Header con imagen de fondo
+    .header2__container
+      img(src="/img/grupopersonas2.webp" alt="" srcset="")  
+      h1 Page 
+      //- menu para volver a home
+      .back
+        a(href="/")  Home 
+        span.fa-solid.fa-angle-right
+        p Page 
+
+  .banner__text
+    h2 Ut et tortor aliquam 
+      span tinciduntenim nec egestas turpis.
+    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate, nulla at tempor consectetur, nisi nisi vulputate metus, eget convallis purus nisl sit amet mi. Nam vitae arcu risus. Suspendisse luctus ligula ut sapien tristique, sed semper purus tempor. Donec sed velit velit. Donec quis sem id nibh suscipit venenatis. Sed commodo tincidunt mi, id aliquam arcu elementum at. Mauris dictum at nisi non feugiat. Cras vitae turpis pellentesque nisi blandit aliquam in a leo.
+    p Praesent finibus viverra efficitur. Fusce convallis nisi sit amet lacus lobortis blandit. Quisque rhoncus enim et libero tincidunt imperdiet. Quisque pellentesque augue et justo bibendum hendrerit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum dapibus dui in elit bibendum, quis ullamcorper augue ultrices. Nullam molestie orci a libero varius porttitor. Praesent justo massa, consequat ut sodales in, rhoncus malesuada leo. Fusce mollis, purus at maximus placerat, risus magna interdum nisl, sit amet mollis nibh lectus ut massa. Nulla tempor lorem rutrum elit porta, id commodo felis tincidunt.
+
+  .slider 
+    i
+      input(checked type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=1');")
+      input(type="radio" name="s" style="background-image: url('/img/grupopersonas.webp');" )
+      input(type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=3');" )
+      input(type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=4');" )
+      input(type="radio" name="s" style="background-image: url('https://picsum.photos/500/300?random=5');" )
+  
+  .banner__text2
+      img.wave(src="/img/wavestop2.svg", alt="", srcset="")
+      .box
+        .text
+          h2 Phasellus volutpat nunc et bibendum 
+            span  ornare
+          p Aliquam pharetra nisl quis suscipit elementum. In ut semper neque. Quisque libero risus, maximus in pharetra vel, pulvinar ut tortor. Vivamus a interdum arcu, ultricies sagittis ante. Nullam feugiat dolor nec erat venenatis, consectetur gravida ipsum venenatis.
+          p Fusce posuere velit id est condimentum condimentum. Sed elit odio, sodales sit amet quam nec, varius pharetra dolor. Phasellus vitae arcu eget massa mattis suscipit nec at metus. Quisque eget eros diam. Fusce a ullamcorper dui. Aliquam erat volutpat. Etiam lectus est, tincidunt non tortor id, tempus mollis dui. Vivamus id ex nec nisi ullamcorper faucibus in non lectus.
+      img.wave(src="/img/wavesbottom2.svg", alt="", srcset="")
+  
+  .banner__text-image2
+      .text
+        h2 Praesent ultricies quam vel tempus 
+          span elementum 
+        h4 
+          span tellus nulla consectetur tellus
+        p Fusce vel ipsum viverra, maximus erat ac, venenatis dui. Praesent elementum pellentesque vestibulum. Sed facilisis ex in purus pulvinar, dictum tincidunt orci cursus. 
+      .image
+        img(src="https://img.freepik.com/foto-gratis/retrato-mujer-trabajadora-servicio-al-cliente_144627-37979.jpg?w=740&t=st=1664204061~exp=1664204661~hmac=9f9b7b54df38c16cf0aa120576edcbc6c01ede54390b73dd6f3d0d0fa077e015", alt="", srcset="")
+      
+
+block body-footer
+  include includes/footer

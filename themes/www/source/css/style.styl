@@ -143,6 +143,9 @@ body
 .container
   max-width 1024px
   margin auto
+.container2
+  max-width 1224px
+  margin auto
 
 
 //////////////////////////////////
@@ -248,7 +251,8 @@ body
 
 
 // Calidad - Segmento de cartas despues del Header
-.quality
+.quality,
+.quality2
 
   padding 0px 20px
   position relative
@@ -261,6 +265,8 @@ body
   justify-content center
   align-items center
   flex-wrap wrap
+  .margin
+    padding 80px
   .quality__box
     width 210px
     height 280px
@@ -306,7 +312,8 @@ body
         color color-first
         margin-top 10px
         font-weight 900
-
+.quality2
+  margin-top 150px
 // fondo con circulos
 .circles
   width 100%
@@ -438,7 +445,11 @@ body
 
 
 // Banner con fondo de color con ondas + imagen al lado
-.banner__text-image,.banner__text2,.banner__text-image2
+.reverse
+  flex-direction: reverse
+.banner__text-image,
+.banner__text2,
+.banner__text-image2
   width 100%
   display flex
   flex-direction column
@@ -530,7 +541,7 @@ body
               right 8vw
             @media escritorio-s
               right 0vw
-
+    
 // Servicios
 
 .services
@@ -879,8 +890,10 @@ body
     transform scale(1.2)
 
 // texto imagen con fondo
-
-.banner__text-image2
+.banner__text-image2,
+.banner__text-image3,
+.banner__text-image4,
+.banner__text-image5
   padding 40px
   display flex
   flex-direction column-reverse
@@ -894,7 +907,7 @@ body
     padding 40px
     padding 20px 80px
     
-  .image
+  .image,.image2
     width 100%
     height 100%
     @media escritorio-s
@@ -906,6 +919,7 @@ body
       object-fit cover
       @media escritorio-s
         border-radius 16% 84% 75% 25% / 41% 41% 59% 59% 
+
   .text
     width 100%
     height 100%
@@ -935,6 +949,36 @@ body
       
   .button:hover
     transform scale(1.2)
+
+.banner__text-image3
+  flex-direction: column-reverse
+  padding: 20px
+  @media movil
+    padding: 20px 50px
+  .text
+    width 100%
+    height 100%
+    padding: 0px
+    @media movil
+      padding: 0px 20px
+  .image2
+    width 100%
+    height 100%
+    img
+      width 100%
+      height 100%
+      object-fit cover;
+      border-radius 25px
+
+.banner__text-image4
+  flex-direction: column-reverse
+  @media escritorio-s
+    flex-direction: row
+.banner__text-image4,
+.banner__text-image5
+  .image2
+    img
+      border-radius 25px
 
 
 //////////////////////////////////
@@ -1114,19 +1158,336 @@ body
 // CONTACT ///////////////////////
 //////////////////////////////////
 
-.contact
+.header2
   // header con imagen
-  .contact__header
+  width: 100%
+  height: 100%
+  .header2__container
     width: 100%
-    height: 50vh
-  // .contact__sidebar
-  // .contact__form
+    height: 70vh
+    background: color-first
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    color color-white
+    z-index 0
+    h1
+      font-family: fontfam1
+      font-weight: 600
+      font-size: 50px
+    .back
+      z-index 100
+      display: flex
+      font-size: font-s
+      gap 10px
+      justify-content: center
+      align-items: flex-end
+      a
+        color white
+      a:hover
+        font-weight: 600 
+    img
+      z-index 0
+      position: absolute
+      top 0
+      left: 0
+      width: 100%
+      height: 70vh
+      object-fit: cover
+      opacity: 0.5
 
+  .contact-container
+    width: 100%
+    height: 100%
+    padding 80px 0px
+    z-index: 2
+    display flex
+    justify-content: center
+    flex-wrap: wrap
+    flex-direction: column-reverse
+    align-items: center
+    @media escritorio-s
+      flex-direction: row
+    @media escritorio-m
+      max-width: 1224px
+    .text 
+      width: 100%
+    .contact__sidebar
+      width: 80%
+      height: 100%
+      display: flex
+      flex-direction: column
+      padding 10px
+      justify-content: center
+      align-items: center
+      @media escritorio-s
+        width: 40%
+      h2 
+        color color-black
+        margin: 20px 0px
+      @media escritorio-s
+        width: 35%
+        padding: 25px 
+      .box__contact
+        width: fit-content
+        padding: 20px 10px
+        height: 100%
+        display: flex
+        flex-direction: column
+        text-align: center
+        gap: 5px
+        justify-content: center
+        align-items: center
+        border-radius 25px
+        -webkit-box-shadow: 0px 0px 18px 4px rgb(231, 231, 231);
+        -moz-box-shadow: 0px 0px 18px 4px rgb(231, 231, 231);
+        box-shadow: 0px 0px 18px 4px rgb(231, 231, 231);
+        margin-bottom: 25px
+        @media movil
+          display: flex
+          text-align: left
+          flex-direction: row
+        @media escritorio-s
+          width: 100%
+        .text
+          width: 200px
+          height: 100%
+          margin 0% !important
+          a
+            text-decoration: none
+            font-weight: 600
+            color color-letter
 
+        .image
+          width: 80px
+          height: 80px !important
+          padding: 5px
+          border-radius 100%
+          background: linear-gradient(90deg, rgba(0,24,198,1) 0%, rgba(12,0,255,1) 35%, rgba(0,194,255,1) 100%);
+          img
+            background: color-white
+            width 100%
+            height: 100%
+            border-radius 100%
+        .content
+            color color-black
 
-
+    .contact__form
+      width: 95%
+      height: auto
+      display: flex
+      justify-content: center
+      align-items: center
+      @media movil
+        width: 80%
+      @media escritorio-s
+        width: 60%
       
+      .box__form
+        text-align: center
+        display: flex
+        flex-direction: column
+        width: 95%
+        height: 95%
+        margin auto
+        padding: 80px
+        -webkit-box-shadow: 0px 0px 18px 4px rgb(231, 231, 231);
+        -moz-box-shadow: 0px 0px 18px 4px rgb(231, 231, 231);
+        box-shadow: 0px 0px 18px 4px rgb(231, 231, 231);
+        padding 20px 20px 80px 20px
+        border-radius 25px
+        h2
+          font-size: 30px
+          color color-first
+          margin: 20px 0px
+          font-family: fontfam1
+            
+        form
+          display: flex
+          flex-direction: row
+          flex-wrap: wrap
+          #msg
+            height: 250px
+          .full,.doble
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: 50px;
+          .doble
+            width: 100%;
+            @media movil
+              width: 45%;
+
+          .button
+            font-size: font-l
+            margin: 8px;
+            border none
 
 
+//////////////////////////////////
+// PAGE // ///////////////////////
+//////////////////////////////////
+
+i {
+	position: relative;
+	display: block;
+	width: 700px;
+	height: 425px;
+	overflow: hidden;
+	border-radius: 5px;
+  margin auto
+}
+
+i:before, i:after {
+	content: '⥪';
+	position: absolute;
+	top: 50%;
+	left: 1rem;
+	z-index: 2;
+	width: 2rem;
+	height: 2rem;
+	background: dodgerblue;
+	color: white;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	pointer-events: none;
+}
+
+i:after {
+	content: '⥭';
+	left: auto;
+	right: 1rem;
+}
+
+/* I haven't found a way for IE and Edge to let me style inputs that way */
+input {
+	appearance: none;
+	-ms-appearance: none;
+	-webkit-appearance: none;
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 5px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	transform: translateX(100%);
+	transition: transform ease-in-out 400ms;
+	z-index: 1;
+}
+
+input:focus {
+	outline: none;
+}
+
+// input:after {
+// 	content: attr(title);
+// 	position: absolute;
+// 	top: 1rem;
+// 	left: 1rem;
+// 	background-color: rgba(0,0,0,0.4);
+// 	color: white;
+// 	padding: .5rem;
+// 	font-size: 1rem;
+// 	border-radius: 5px;
+// }
+
+input:not(checked):before {
+	content: '';
+	position: absolute;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	top: 50%;
+	left: calc(-100% + 1rem);
+}
+
+input:checked:before {
+	display: none;
+	left: 1rem;
+}
+
+input:checked {
+	transform: translateX(0);
+	pointer-event: none;
+	z-index: 0;
+	box-shadow: -5px 10px 20px -15px rgba(0,0,0,1);
+}
+
+input:checked + input:before {
+	left: -3rem;
+}
+
+input:checked + input ~ input:before {
+	display: none;
+}
+
+
+//////////////////////////////////
+// 404 // ///////////////////////
+//////////////////////////////////
+
+.notFound 
+  width: 100%
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  padding-top: 50px
+  img
+    width: 280px
+    height: 280px
+    @media tablet
+      width: 600px
+      height: 600px
+      
   
+//////////////////////////////////
+// TAG ///////////////////////////
+//////////////////////////////////
+
+.tag
+  padding: 150px 30px 150px 150px
+  width: 500px
+  h2
+    color color-first
+    margin-bottom: 20px
+    
+  hr
+    width: 50%
+    border-color: none
+    border-top-color: color-first
+  ul
+    margin-top: 20px
+    width: 100%
+    height: 100%
+    display: flex
+    flex-wrap: wrap
+    li
+      list-style: none
+      width: fit-content
+      margin 15px 8px
+      a
+        border 1px solid rgba(196, 196, 196, 0.356)
+        color color-black
+        padding: 5px 8px
+        text-transform: capitalize
+        font-weight: 900
+        font-size: font-m
+        transition 0.2s
+      a:hover
+        background: color-first
+        border none
+        color white
+
 

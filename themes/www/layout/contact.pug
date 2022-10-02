@@ -4,8 +4,55 @@ block body-header
   include includes/header
 
 block body-main
-  .contact 
-    
+  .header2 
+    //- Header con imagen de fondo
+    .header2__container
+      img(src="/img/grupopersonas2.webp" alt="" srcset="")  
+      h1 Contacto 
+      //- menu para volver a home
+      .back
+        a(href="/")  Home 
+        span.fa-solid.fa-angle-right
+        p contact
+    .contact-container
+      .contact__sidebar
+        h2 Fell Free Contact Us Toady And Get Your Solution
+        //- Caja para contacto telefonico
+        .box__contact 
+          .image 
+            img(src="/img/ico/phone.svg" alt="" srcset="")
+          .content 
+            .text
+              h3 Llámanos ahora! 
+              a(href="/") + 00 ( 500 ) 642 - 00 ( 240 ) 842
+        //- Caja para contacto email
+        .box__contact 
+          .image 
+            img(src="/img/ico/email.svg" alt="" srcset="")
+          .content 
+            .text
+              h3 Envíanos un Mensaje
+              a(href="/")  ejemplo@ejemplos.com
+
+        //- Caja para direccion de ubicacion    
+        .box__contact 
+          .image 
+            img(src="/img/ico/location.svg" alt="" srcset="")
+          .content 
+            .text
+              h3 Visítanos!
+              a(href="/") Cali - Colombia Norte - Street 220
+      .contact__form
+        .box__form
+          h2 Contacta con nosotros y planeemos tu proyecto 
+          form(id='contactForm' name='contactForm').form
+            input#name.full(type='text' placeholder='Nombre' name='name' title='nombre', required)
+            input#email.doble(type='email' placeholder='Email' name='email' title='email' required)
+            input#tel.form-control.doble(type='text' placeholder='Teléfono' name='tel' title='telefono')
+            textarea#msg.full(type='text' placeholder='Mensaje' name='msg' title='mensaje')
+            input#bpriva.button(type='submit' value="Submit")
+
+
 
 block body-footer
   include includes/footer
