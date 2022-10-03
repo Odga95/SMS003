@@ -355,7 +355,7 @@ body
       top  60%
       left  0vw
   &:nth-child(3)
-    right 13vw
+    right 15vw
     left  auto
     top  40%
     transform scale(1.8)
@@ -402,10 +402,12 @@ body
 .banner__text,.banner__text2
   width 90%
   height 100%
-  padding 40px 20px
+  padding 40px 0px
   display flex
   flex-direction column
   margin auto
+  @media movil
+    padding 40px 20px
   @media tablet
     padding 40px 40px
 
@@ -472,7 +474,7 @@ body
       height auto
       margin auto
       color color-white
-      padding 40px 5px
+      padding 40px 0px
       z-index 2
       @media tablet
         width 90%
@@ -688,9 +690,10 @@ body
       text-align center
       color color-first
   .quotes
-    margin 30px 00px 50px 0px
+    margin 30px 0px 50px 0px
 
   .testimonials__box
+    overflow: hidden
     max-width 1024px
     margin auto
     display flex
@@ -698,9 +701,11 @@ body
     flex-wrap wrap
     gap 10px
     @media movil
-      gap 50px
+      gap 20px
+      
       
     .box
+      overflow: hidden
       width 90%
       height auto
       border-radius 25px
@@ -714,8 +719,14 @@ body
         
       .box_user
         display flex
-        gap 20px
+        gap 5px
+        flex-direction: column
         margin-bottom 15px
+        justify-content: center
+        align-items: center
+        @media movil
+          flex-direction: row
+          gap 20px
         .box__img
           width 70px
           height 70px
@@ -729,7 +740,11 @@ body
             border-radius 100%
 
         .box__info
-          max-width 150px
+          max-width 90%
+          text-align: center
+          @media movil
+            max-width 150px
+            text-align: left
           .box__info--name
             font-family fontfam2
             font-size font-l
@@ -738,8 +753,9 @@ body
             font-weight 900
         svg
           display flex
-          margin-right -5px;
-          margin-left auto;
+          margin auto
+          @media movil
+            margin-right -5px;
       .box__content
         display -webkit-box
         -webkit-line-clamp 3
@@ -766,8 +782,10 @@ body
     .text
       margin-top -20px
       margin-bottom -20px
-      width 80%
+      width 90%
       text-align justify
+      @media movil
+        width 80%
       p
       font-size font-l
       color color-black
@@ -901,7 +919,9 @@ body
   align-items center
   color color-black
   gap 40px
-  padding 20px 50px
+  padding 20px 10px
+  @media movil
+     padding 20px 50px
   @media escritorio-s
     flex-direction  row-reverse
     padding 40px
@@ -986,32 +1006,41 @@ body
 //////////////////////////////////
 
 .blog 
-  width 90%
+  width 100%
   height 100%
   display flex
   justify-content center
-  align-items flex-start
-  flex-direction: row-reverse
+  align-items center 
   margin auto
+  flex-direction: column
   @media escritorio-s
+    width 90%
+    align-items flex-start 
+    flex-direction: row-reverse
     max-width: 1224px
 
   .blogs
-    width 75%
+    width 95%
     height 100%
     display flex
     flex-direction column
     padding 150px 15px 40px 15px
+    @media escritorio-s
+      width 75%
     h1
+      text-align: center
       font-family fontfam2
       color color-first
       font-size 50px
       margin-bottom 70px
+      @media escritorio-s
+        text-align: left
 
 // CONTENIDO BLOG - COLUMNA DERECHA - BLOGS
     .blog__box 
       width 100%
       height 100%
+      margin-bottom: 50px
       hr
         border-color:  rgba(236, 236, 236, 0.39)
         width: 90%
@@ -1032,8 +1061,11 @@ body
         width 90%
         height 100%
         display: flex
+        flex-direction: column
         padding: 5px 0px
         margin auto
+        @media movil
+          flex-direction: row
         .fecha,
         .author,
         .tag
@@ -1071,16 +1103,21 @@ body
         text-overflow ellipsis
         p
           margin-bottom: 15px
-        .button
-          font-size: font-l
-          font-family: fontfam2
+      .button
+        font-size: font-l
+        font-family: fontfam2
+        margin-left 15px
+        @media movil
+          margin-left 45px
 // CONTENIDO BLOG - COLUMNA DERECHA - TAGS/CATEGORIES
   .sidebar
-    width: 25%
+    width: 95%
     height: 100%
     display: flex
     padding 150px 15px 40px 15px
     flex-direction: column
+    @media tablet
+      width: 25%
     hr 
       border-color rgba(0, 89, 255, 0.5)
       width 50%
@@ -1123,6 +1160,7 @@ body
             border-top 0.2mm solid rgba(0, 0, 0, 0.096)
             width: 100%
             margin-top 20px
+
 // Categorías / Tags
     .cat-tag
       width: 95%
@@ -1332,105 +1370,111 @@ body
 //////////////////////////////////
 // PAGE // ///////////////////////
 //////////////////////////////////
+.slider
 
-i {
-	position: relative;
-	display: block;
-	width: 700px;
-	height: 425px;
-	overflow: hidden;
-	border-radius: 5px;
-  margin auto
-}
+// Slider 
+  .slid 
+    position: relative;
+    display: block;
+    width: 90%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 5px;
+    margin auto
+    @media tablet
+      width: 500px
+      height: 300px
+    @media escritorio-s
+      width: 700px;
+      height: 425px;
+    
 
-i:before, i:after {
-	content: '⥪';
-	position: absolute;
-	top: 50%;
-	left: 1rem;
-	z-index: 2;
-	width: 2rem;
-	height: 2rem;
-	background: dodgerblue;
-	color: white;
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	pointer-events: none;
-}
+  i:before, i:after 
+    content: '⥪';
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    z-index: 2;
+    width: 2rem;
+    height: 2rem;
+    background: dodgerblue;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+  
 
-i:after {
-	content: '⥭';
-	left: auto;
-	right: 1rem;
-}
+  i:after 
+    content: '⥭';
+    left: auto;
+    right: 1rem;
+  
 
-/* I haven't found a way for IE and Edge to let me style inputs that way */
-input {
-	appearance: none;
-	-ms-appearance: none;
-	-webkit-appearance: none;
-	display: block;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	border-radius: 5px;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	transform: translateX(100%);
-	transition: transform ease-in-out 400ms;
-	z-index: 1;
-}
+  /* I haven't found a way for IE and Edge to let me style .inputs that way */
+  .input 
+    appearance: none;
+    -ms-appearance: none;
+    -webkit-appearance: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transform: translateX(100%);
+    transition: transform ease-in-out 400ms;
+    z-index: 1;
+  
+  .input:focus 
+    outline: none;
+  
 
-input:focus {
-	outline: none;
-}
+  // .input:after {
+  // 	content: attr(title);
+  // 	position: absolute;
+  // 	top: 1rem;
+  // 	left: 1rem;
+  // 	background-color: rgba(0,0,0,0.4);
+  // 	color: white;
+  // 	padding: .5rem;
+  // 	font-size: 1rem;
+  // 	border-radius: 5px;
+  // }
 
-// input:after {
-// 	content: attr(title);
-// 	position: absolute;
-// 	top: 1rem;
-// 	left: 1rem;
-// 	background-color: rgba(0,0,0,0.4);
-// 	color: white;
-// 	padding: .5rem;
-// 	font-size: 1rem;
-// 	border-radius: 5px;
-// }
+  .input:not(checked):before 
+    content: '';
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    top: 50%;
+    left: calc(-100% + 1rem);
+  
 
-input:not(checked):before {
-	content: '';
-	position: absolute;
-	width: 2rem;
-	height: 2rem;
-	border-radius: 50%;
-	top: 50%;
-	left: calc(-100% + 1rem);
-}
+  .input:checked:before 
+    display: none;
+    left: 1rem;
+  
 
-input:checked:before {
-	display: none;
-	left: 1rem;
-}
+  .input:checked 
+    transform: translateX(0);
+    pointer-event: none;
+    z-index: 0;
+    box-shadow: -5px 10px 20px -15px rgba(0,0,0,1);
+  
+  .input:checked + .input:before 
+    left: -3rem;
+  
 
-input:checked {
-	transform: translateX(0);
-	pointer-event: none;
-	z-index: 0;
-	box-shadow: -5px 10px 20px -15px rgba(0,0,0,1);
-}
-
-input:checked + input:before {
-	left: -3rem;
-}
-
-input:checked + input ~ input:before {
-	display: none;
-}
+  .input:checked + .input ~ .input:before 
+    display: none
+  
 
 
 //////////////////////////////////
@@ -1456,9 +1500,15 @@ input:checked + input ~ input:before {
 // TAG ///////////////////////////
 //////////////////////////////////
 
-.tag
-  padding: 150px 30px 150px 150px
-  width: 500px
+.tag-cat
+  padding: 150px 15px
+  width: 100%
+  margin: auto
+  @media tablet
+    padding: 150px 30px 150px 150px
+    width: 500px
+    
+    margin 0px
   h2
     color color-first
     margin-bottom: 20px
